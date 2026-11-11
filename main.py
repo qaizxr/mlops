@@ -8,10 +8,14 @@ def load_students(path="student.csv"):
 
 
 def main():
+    print("Student roster report")
+    print("-" * 30)
     students = load_students()
     print(f"Loaded {len(students)} students")
     for student in students:
         print(f"{student['name']} (age {student['age']}, {student['major']})")
+    print("-" * 30)
+    print("Report complete")
 
 
 if __name__ == "__main__":
