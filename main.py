@@ -15,6 +15,9 @@ def main():
     for student in students:
         print(f"{student['name']} (age {student['age']}, {student['major']})")
     print("-" * 30)
+    if students:
+        average_age = sum(int(s["age"]) for s in students) / len(students)
+        print(f"Average age: {average_age:.1f}")
     print("Report complete")
 
 
